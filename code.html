@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Shondulah Riggins</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/prismTomorrow.css">
+</head>
+
+<body>
+    <div class="container bg-dark">
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">Taco Cat</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/app.html">Application</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/code.html">Code<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/ShonV24Taco-Cat" target="_blank">Git The Code</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="https://shonnsportfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Developers Portfolio</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Layout -->
+        <!-- 1st row () -->
+        <section id="about" class="about-mf sect-pt4 route">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="box-shadow-full">
+
+                            <main role="main" class="container">
+                                <div class="row">
+                                    <div class="col-10 offset-1 line-numbers">
+                                        <pre><code class="language-javascript">function reverseString() {
+                        function reverseString() {
+                            let userWord = document.getElementById("tacoCat").value;
+                            userWord = userWord.replace(/\W/g, "").toLowerCase();
+                            let outputWord = "";
+                            //alert(userWord);
+                        
+                            //Flips the userWord to reversed
+                            for (let i = userWord.length - 1; i >= 0; i--) {
+                                outputWord = outputWord + userWord[i];
+                            }
+                        
+                            let output = document.getElementById("tacoOutput");
+                        
+                            if (userWord == outputWord) {
+                                output.innerText = "This is a palindrome!";
+                            } else {
+                                output.innerText = "This is NOT a palindrome.";
+                            }
+                            //Before Loop - reverseWord = "" []
+                            //Loop 1 - i = 4; userWord[4] = k reverseWord [] + k = [k]
+                            //Loop 2 - i = 3; userWord[4] = n reverseWord [k] + n = [k, n]
+                            //Loop 3 - i = 2; userWord[4] = a
+                            //Loop 4 - i = 1; userWord[4] = r
+                            //Loop 5 - i = 4; userWord[4] = F
+
+                        }
+                        </code>
+                    </pre>
+                                    </div>
+        </section>
+        </main>
+
+
+
+        <footer class="footer bg-dark text-center">
+            <div class="container">
+                <span class="text-muted">Shondulah RigginsⒸ 2021</span>
+            </div>
+        </footer>
+
+
+        for (let i = userWord.length - 1; i >= 0; i--) { outputWord = outputWord + userWord[i]; } let output = document.getElementById("tacoOutput"); if (userWord.toLowerCase() == outputWord.toLowerCase()) { output.innerText = "This is a palandrome!"; } else
+        { output.innerText = "This is NOT a palandrome."; } }
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="/js/prismTomorrow.js"></script>
+        <script src=""></script>
+</body>
+
+</html>
