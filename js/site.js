@@ -1,26 +1,28 @@
-function reverseString() {
-    let userWord = document.getElementById("tacoCat").value;
-    userWord = userWord.replace(/\W/g, "").toLowerCase();
-    let outputWord = "";
-    //alert(userWord);
+function printNumbers() {
+    let startNum = parseInt(document.getElementById("numOne").value);
+    let endNum = parseInt(document.getElementById("numTwo").value);
+    displayData(startNum, endNum);
+}
 
-    //Flips the userWord to reversed
-    for (let i = userWord.length - 1; i >= 0; i--) {
-        outputWord = outputWord + userWord[i];
+//Display the numbers in a table
+function displayData(start, end) {
+    const myTemplate = document.getElementById("dataTemplate");
+    const resultsBody = document.getElementById("resultsBody");
+    resultsBody.innerHTML = "";
+    //Loop over values from start to end
+    for (let i = start; i <= end; i += 10) {
+        const dataRow = document.importNode(myTemplate.content, true);
+        dataRow.getElementById("col1").textContent = i;
+        dataRow.getElementById("col2").textContent = i + 1;
+        dataRow.getElementById("col3").textContent = i + 2;
+        dataRow.getElementById("col4").textContent = i + 3;
+        dataRow.getElementById("col5").textContent = i + 4;
+        dataRow.getElementById("col6").textContent = i + 5;
+        dataRow.getElementById("col7").textContent = i + 6;
+        dataRow.getElementById("col8").textContent = i + 7;
+        dataRow.getElementById("col9").textContent = i + 8;
+        dataRow.getElementById("col10").textContent = i + 9;
+        resultsBody.appendChild(dataRow);
     }
-
-    let output = document.getElementById("tacoOutput");
-
-    if (userWord == outputWord) {
-        output.innerText = "This is a palindrome!";
-    } else {
-        output.innerText = "This is NOT a palindrome.";
-    }
-    //Before Loop - reverseWord = "" []
-    //Loop 1 - i = 4; userWord[4] = k reverseWord [] + k = [k]
-    //Loop 2 - i = 3; userWord[4] = n reverseWord [k] + n = [k, n]
-    //Loop 3 - i = 2; userWord[4] = a
-    //Loop 4 - i = 1; userWord[4] = r
-    //Loop 5 - i = 4; userWord[4] = F
 
 }
