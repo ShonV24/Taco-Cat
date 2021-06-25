@@ -53,31 +53,38 @@
                                 <div class="row">
                                     <div class="col-10 offset-1 line-numbers">
                                         <pre><code class="language-javascript">function reverseString() {
-                        function reverseString() {
+                             function reverseString() {
+                             //Get the User's Word
+                            let regex = /[\W_]/g;
                             let userWord = document.getElementById("tacoCat").value;
-                            userWord = userWord.replace(/\W/g, "").toLowerCase();
-                            let outputWord = "";
-                            //alert(userWord);
-                        
-                            //Flips the userWord to reversed
-                            for (let i = userWord.length - 1; i >= 0; i--) {
-                                outputWord = outputWord + userWord[i];
+                            let cleanedWord = userWord.replaceAll(" ", "");
+                            cleanedWord = cleanedWord.toLowerCase().replace(regex, "");
+                            let start = cleanedWord.length - 1;
+                            let reverseWord = "";
+                            //Frank
+                            //[F,r,a,n,k
+                            //[0,1,2,3.4]-1
+                            //For Loop
+                            for (let i = start; i >= 0; i--) {
+                             reverseWord = reverseWord + cleanedWord[i];
+                             //Better Code: reverseWord += cleanedWord[i}]
                             }
-                        
+                                            
                             let output = document.getElementById("tacoOutput");
-                        
-                            if (userWord == outputWord) {
-                                output.innerText = "This is a palindrome!";
+                            output.innerText = reverseWord
+                                            
+                            //Compare userWord to reverseWord
+                            let resultOutput = document.getElementById("palindromeOutput");
+                                            
+                            if (cleanedWord == reverseWord) {
+                            resultOutput.innerText = "It's a Palindrome!";
+                                            
+                                            
                             } else {
-                                output.innerText = "This is NOT a palindrome.";
+                                resultOutput.innerText = "Sorry, Not a Palindrome!";
                             }
-                            //Before Loop - reverseWord = "" []
-                            //Loop 1 - i = 4; userWord[4] = k reverseWord [] + k = [k]
-                            //Loop 2 - i = 3; userWord[4] = n reverseWord [k] + n = [k, n]
-                            //Loop 3 - i = 2; userWord[4] = a
-                            //Loop 4 - i = 1; userWord[4] = r
-                            //Loop 5 - i = 4; userWord[4] = F
-
+                                            
+                            }
                         }
                         </code>
                     </pre>
